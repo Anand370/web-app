@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel='stylesheet' href='css/style.css' type='text/css' />
+    
+    <title>web page</title>
+</head>
+<body>
+   <div class='container-sm'>
+       <div class='menu'>
+           <p>EMMISSION API</p>
+           <ul>
+               <li>Home</li>
+               <li>API</li>
+               <li>Example</li>
+               <li>Help</li>
+               <li>Contact Us</li>
+               <li>Privacy</li>
+           </ul>
+       </div>
+       <h1>Welcome to the emmission Api page</h1>
+       <div class='row emmission'>
+           <div class='col-sm'>Select city to view  emmision value of gases</div>
+           <div class='col-sm'>
+               <select id='list' onchange="optionValue()">
+                   <option><--select city --/></option>
+                   <option value='Bangkok'>Bangkok</option>
+                   <option value='Beijing' >Beijing</option>
+                   <option value='Dhaka' >Dhaka</option>
+                   <option value='Guangzhou' >Guangzhou</option>
+                   <option value='Kolkata' >Kolkata</option>
+                   <option value='Kyoto'>Kyoto</option>
+                   <option value='Mexicocity'>Mexicocity</option>
+                   <option value='Moscow' >Moscow</option>
+                   <option value='Mumbai'>Mumbai</option>
+                   <option value='Newyork' >Newyork</option>
+                   <option value='Saopaul' >Saopaul</option>
+                   <option value='Karachi' >Karachi</option>
+                   <option value='Los-Angeles' >Los-Angeles</option>
+               </select>
+           </div>
+       </div>
+       <div>
+          <h1 id='demo'></h1>
+       </div>
+       <div id='data-detail'>
+                 <div class='data Bangkok'>
+                   <div class='row'>
+                        <div class='col'><canvas id="methane-bangkok" ></canvas></div>
+                        <div class='col'><canvas id="carbon-bangkok"></canvas></div>
+                        <div class='col'><canvas id="ozone-bangkok"></canvas></div>
+                        <div class='col'><canvas id="nitrozen-kolkata"></canvas></div>
+                      </div>
+                  </div>
+                
+                 <div class='data Karachi'>
+                      <div class='row'>
+                        <div class='col'><canvas id="methane-karachi" ></canvas></div>
+                        <div class='col'><canvas id="carbon-bangkok"></canvas></div>
+                        <div class='col'><canvas id="ozone-karachi"></canvas></div>
+                        <div class='col'><canvas id="nitrozen-karachi"></canvas></div>
+                      </div>
+
+               </div>
+               <div class='data Newyork'>
+                       <div class='row'>
+                            <div class='col'><canvas id="methane-newyork" ></canvas></div>
+                            <div class='col'><canvas id="carbon-bangkok"></canvas></div>
+                            <div class='col'><canvas id="ozone-newyork"></canvas></div>
+                            <div class='col'><canvas id="nitrozen-newyork"></canvas></div>
+                        </div>
+                </div>
+                    <div class='data Saopaul'>
+                        <div class='row'>
+                            <div class='col'><canvas id="methane-saopaul" ></canvas></div>
+                            <div class='col'><canvas id="carbon-bangkok"></canvas></div>
+                            <div class='col'><canvas id="ozone-saopaul"></canvas></div>
+                            <div class='col'><canvas id="nitrozen-saopaul"></canvas></div>
+                        </div>
+                </div>
+                <div class='data Guangzhou'>
+                    <div class='row'>
+                            <div class='col'><canvas id="methane-guangzhou" ></canvas></div>
+                            <div class='col'><canvas id="carbon-guangzhou"></canvas></div>
+                            <div class='col'><canvas id="ozone-guangzhou"></canvas></div>
+                            <div class='col'><canvas id="nitrozen-guangzhou"></canvas></div>
+                    </div>div>
+                </div>
+                <div class='data Mexicocity'>
+                    <div class='row'>
+                        <div class='col'><canvas id="methane-mexicocity" ></canvas></div>
+                        <div class='col'><canvas id="carbon-mexicocity"></canvas></div>
+                        <div class='col'><canvas id="ozone-mexicocity"></canvas></div>
+                        <div class='col'><canvas id="nitrozen-mexicocity"></canvas></div>
+                    </div>
+                 </div>
+                 <div class='data Kyoto'>
+                       <div class='row'>
+                            <div class='col'><canvas id="methane-kyoto" ></canvas></div>
+                            <div class='col'><canvas id="carbon-bangkok"></canvas></div>
+                            <div class='col'><canvas id="ozone-kyoto"></canvas></div>
+                            <div class='col'><canvas id="nitrozen-kyoto"></canvas></div>
+                        </div>
+                  </div>
+                  <div class='data Moscow'>
+                        <div class='row'>
+                            <div class='col'><canvas id="methane-moscow" ></canvas></div>
+                            <div class='col'><canvas id="carbon-bangkok"></canvas></div>
+                            <div class='col'><canvas id="ozone-moscow"></canvas></div>
+                            <div class='col'><canvas id="nitrozen-moscow"></canvas></div>
+                        </div>
+                  </div>
+                  <div class='data Dhaka'>
+               
+                        <div class='row'>
+                            <div class='col'><canvas id="methane-dhaka" ></canvas></div>
+                            <div class='col'><canvas id="carbon-bangkok"></canvas></div>
+                            <div class='col'><canvas id="ozone-dhaka"></canvas></div>
+                            <div class='col'><canvas id="nitrozen-dhaka"></canvas></div>
+                        </div>
+              
+                  </div>
+                  <div class='data Los-Angeles'>
+
+                        <div class='row'>
+                            <div class='col'><canvas id="methane-los-angeles" ></canvas></div>
+                            <div class='col'><canvas id="carbon-bangkok"></canvas></div>
+                            <div class='col'><canvas id="ozone-los-angeles"></canvas></div>
+                            <div class='col'><canvas id="nitrozen-los-angeles"></canvas></div>
+                        </div>
+                   
+                  </div>
+                  <div class='data Kolkata'>
+                        <div class='row'>
+                            <div class='col'><canvas id="methane-kolkata" ></canvas></div>
+                            <div class='col'><canvas id="carbon-kolkata"></canvas></div>
+                            <div class='col'><canvas id="ozone-kolkata"></canvas></div>
+                            <div class='col'><canvas id="nitrozen-kolkata"></canvas></div>
+                        </div>
+                  </div> 
+                  <div class='data Mumbai'>
+                        <div class='row'>
+                            <div class='col'><canvas id="methane-mumbai" ></canvas></div>
+                            <div class='col'><canvas id="carbon-mumbai"></canvas></div>
+                            <div class='col'><canvas id="ozone-mumbai"></canvas></div>
+                            <div class='col'><canvas id="nitrozen-mumbai"></canvas></div>
+                        </div>
+                  </div> 
+                  <div class='data Beijing'>
+                        <div class='row'>
+                            <div class='col'><canvas id="methane-beijing" ></canvas></div>
+                            <div class='col'><canvas id="carbon-beijing"></canvas></div>
+                            <div class='col'><canvas id="ozone-beijing"></canvas></div>
+                            <div class='col'><canvas id="nitrozen-beijing"></canvas></div>
+                        </div>
+                  </div> 
+              </div>
+              <div>
+                  <div class='footer'>
+                      <h3>API GOAL</h3>
+                      <p>Emissions API is a solution that provides simple access to emissions data of climate-relevant gases. For this purpose, data of the European Space Agency’s Sentinel-5P earth observation satellite will be prepared in such a way that 
+                          it allows programmers easy access without the need to have a scientific background in the field.</p>
+                  </div>
+                 <div class='footer'>
+                        <h3>API for</h3>
+                        <p>Emissions API is a solution that provides simple access to emissions data of climate-relevant gases. For this purpose, data of the European Space Agency’s Sentinel-5P earth observation satellite will be prepared in such a way that 
+                            it allows programmers easy access without the need to have a scientific background in the field.</p>
+                    </div>
+              </div>
+   </div> 
+   <script>
+       var city = ['karachi','Beijing','Newyork','Guangzhou','Saopaul','Mexicocity','Mumbai','Kyoto','Moscow','Dhaka','los-angeles','Bangkok','Kolkata'];
+        city = city.sort();
+      /* for (let i=0;i< city.length; i++) {
+                var option = document.createElement("option");
+                 var node = document.createTextNode(city[i]);
+                option.appendChild(node);
+                var element = document.getElementById("list");
+                element.appendChild(option);
+        }
+        function optionValue() {
+            var d = document.getElementById('list');
+            var displaytxt = d.options[d.selectedIndex].text;
+            document.getElementById('demo').innerHTML = displaytxt + " ";
+                
+        }*/
+
+
+   </script>
+ <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script>
+       $(document).ready(function(){
+           $('#list').change(function(){
+               var name = $('#list').val();
+               $('.data').hide();
+               $('.'+name).show();
+           })
+       })
+   </script>
+  
+   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.2/dist/Chart.min.js"> 
+   </script>
+  
+  <script src='js/bangkok/methane.js'></script> <script src='js/bangkok/carbon.js'></script> <script src='js/bangkok/ozone.js'></script> <script src='js/bangkok/nitrozen.js'></script>
+  <script src='js/beijing/methane.js'></script> <script src='js/beijing/carbon.js'></script> <script src='js/beijing/ozone.js'></script> <script src='js/beijing/nitrozen.js'></script>
+
+  <script src='js/dhaka/methane.js'></script><script src='js/dhaka/carbon.js'></script><script src='js/dhaka/ozone.js'></script> <script src='js/dhaka/nitrozen.js'></script>
+  <script src='js/cairo/methane.js'></script><script src='js/cairo/carbon.js'></script><script src='js/cairo/ozone.js'></script> <script src='js/cairo/nitrozen.js'></script>
+ 
+  <script src='js/guangzhou/methane.js'></script><script src='js/guangzhou/carbon.js'></script><script src='js/guangzhou/ozone.js'></script> <script src='js/guangzhou/nitrozen.js'></script>
+  <script src='js/karachi/methane.js'></script> <script src='js/karachi/carbon.js'> </script><script src='js/karachi/ozone.js'></script> <script src='js/karachi/nitrozen.js'></script>
+
+  <script src='js/Kolkata/methane.js'></script><script src='js/kolkata/carbon.js'></script><script src='js/Kolkata/ozone.js'></script><script src='js/Kolkata/nitrozen.js'></script>
+  <script src='js/kyoto/methane.js'></script><script src='js/kyoto/carbon.js'></script><script src='js/kyoto/ozone.js'></script><script src='js/kyoto/nitrozen.js'></script>
+
+  <script src='js/losangeles/methane.js'></script><script src='js/losangeles/nitrozen.js'></script><script src='js/losangeles/carbon.js'></script><script src='js/losangeles/ozone.js'></script>
+
+  <script src='js/mexico/methane.js'></script><script src='js/mexico/carbon.js'></script><script src='js/mexico/ozone.js'></script><script src='js/mexico/nitrozen.js'></script>
+  <script src='js/moscow/ozone.js'></script><script src='js/moscow/methane.js'></script><script src='js/moscow/carbon.js'></script><script src='js/moscow/nitrozen.js'></script>
+ 
+  <script src='js/mumbai/ozone.js'></script><script src='js/mumbai/nitrozen.js'></script><script src='js/mumbai/methane.js'></script><script src='js/mumbai/carbon.js'></script>
+  <script src='js/newyork/carbon.js'></script><script src='js/newyork/methane.js'></script><script src='js/newyork/nitrozen.js'></script> <script src='js/newyork/ozone.js'></script>
+
+  <script src='js/saopaulo/ozone.js'></script><script src='js/saopaulo/nitrozen.js'></script><script src='js/saopaulo/methane.js'></script> <script src='js/saopaulo/carbon.js'></script>
+  <script src='js/shanghai/ozone.js'></script><script src='js/shanghai/nitrozen.js'></script><script src='js/shanghai/methane.js'></script> <script src='js/shanghai/carbon.js'></script>
+</body>
+</html>
